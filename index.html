@@ -3,85 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ular Tangga</title>
+    <title>Interactive Web Page</title>
     <style>
+        /* Embedded CSS */
         body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f8ff;
-            margin: 0;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
         }
         h1 {
-            text-align: center;
-            color: #333;
-            font-size: 2em;
-            margin-bottom: 20px;
+            margin: 0;
         }
-        .board-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        p {
+            font-size: 16px;
         }
-        .board {
-            display: grid;
-            grid-template-columns: repeat(10, 60px);
-            gap: 2px;
-            background-color: #333;
-            border: 5px solid #333;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        ul {
+            list-style-type: square;
         }
-        .cell {
-            width: 60px;
-            height: 60px;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1em;
-            color: #333;
-            position: relative;
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        .cell:nth-child(even) {
-            background-color: #e0e0e0;
-        }
-        .cell .number {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            font-size: 0.8em;
-            color: #666;
-        }
-        .snake {
-            background: linear-gradient(to bottom right, #ff6347, #ff4500);
-            color: #fff;
-        }
-        .ladder {
-            background: linear-gradient(to bottom right, #7fffd4, #40e0d0);
-            color: #fff;
+        button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <div class="board-container">
-        <h1>Papan Permainan Ular Tangga</h1>
-        <div class="board">
-            <!-- Generate cells for the board -->
-            <script>
-                for (let i = 100; i > 0; i--) {
-                    document.write(`<div class="cell"><span class="number">${i}</span></div>`);
-                }
-            </script>
-        </div>
-    </div>
+    <header>
+        <h1>Welcome to My Interactive Web Page</h1>
+    </header>
+    <main>
+        <p>This is a simple HTML document with embedded CSS and JavaScript. Below is a list of some items:</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <button id="myButton">Click Me!</button>
+    </main>
 
     <script>
-        // Adding snakes and ladders
-        document.querySelectorAll('.cell')[96].classList.add('ladder'); // Example ladder
-        document.querySelectorAll('.cell')[75].classList.add('snake');  // Example snake
+        // Embedded JavaScript
+        document.getElementById('myButton').addEventListener('click', function() {
+            alert('Button was clicked!');
+        });
     </script>
 </body>
 </html>
